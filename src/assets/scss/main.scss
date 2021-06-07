@@ -13,7 +13,9 @@
 html,
 body {
     font-family: 'Montserrat', sans-serif;
+    min-width: 320px;
 }
 
-@import "./header";
-@import "./main-block";
+@import "./blocks/header";
+@import "./blocks/main-block";
+@import "./blocks/photo";

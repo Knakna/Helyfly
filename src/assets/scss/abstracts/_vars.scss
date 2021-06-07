@@ -1,3 +1,5 @@
+@import "./mixins";
+
 // Colors
 $accentColor: #FC9B09;
 $primaryColor: #fff;
@@ -16,6 +18,7 @@ $breakpoints: (
 
 // Container
 %container {
+    width: 100%;
     padding: 0 15px;
     @media screen and (min-width: 576px) {
         padding: 0 35px;
@@ -29,3 +32,5 @@ $breakpoints: (
         margin: 0 auto;
     }
 }
+
+// @extend %container;

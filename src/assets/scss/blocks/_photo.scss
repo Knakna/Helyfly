@@ -1,0 +1,21 @@
+.photo {
+    background-color: red;
+
+    .container {
+        @extend %container;
+    }
+    }
+
+.photo__title {
+    background-color: red;
+
+}
+
+.photo__video {
+    width: 100%;
+}
+
+.photo__dasc {
+    background-color: red;
+
+}
