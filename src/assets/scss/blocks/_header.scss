@@ -21,9 +21,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 6rem;
     @include media(sm) {
-        height: 100px;
+        height: 10rem;
     }
 }
 .header__wrapper {
@@ -31,18 +31,23 @@
     align-items: center;
 }
 
-.header__logo {
-    margin-right: 45px;
+.header__link {
+    margin-right: 4.5rem;
     @include media(xs) {
-        margin-right: 36px;
+        margin-right: 3.6rem;
     }
     @include media(sm) {
-        height: 23px;
+        height: 2.3rem;
+        width: 13rem;
+    }
+    .logo {
+        width: 100%;
+        height: 100%
     }
 }
 
 .header__city-link {
-    @include text(14px, 400, 17px, $linkColor);
+    @include text(1.4rem, 400, 1.2, $linkColor);
     @include media(xs) {
         display: none;
     }
@@ -51,7 +56,7 @@
 .header__phone {
     display: none;
     span {
-        @include text(14px, 400, 17px, $textColorLight);
+        @include text(1.4rem, 400, 1.2, $textColorLight);
     }
     @include media(xs) {
         display: block;
@@ -59,7 +64,7 @@
 }
 
 .header__phone-link {
-    @include text(14px, 400, 17px, $textColor);
+    @include text(1.4rem, 400, 1.2, $textColor);
 }
 
 .header__user {

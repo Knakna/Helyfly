@@ -19,12 +19,12 @@ const notify = require('gulp-notify'); //предоставляет информ
 const browserSync = require('browser-sync').create(); // для запуска сервера и перезагрузки страницы при внесении изменений
 
 
-// Пути 
+// Пути
 const srcPath = 'src/';
 const distPath = 'dist/';
 
 const path = {
-    // Исходные файлы. С этими файлами мы будем работать 
+    // Исходные файлы. С этими файлами мы будем работать
     src: {
         html:   srcPath + "*.html",
         js:     srcPath + "assets/js/*.js",
@@ -32,7 +32,7 @@ const path = {
         images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
-    // В эти папки будут собираться файлы 
+    // В эти папки будут собираться файлы
     build: {
         html:   distPath,
         js:     distPath + "assets/js/",
@@ -70,9 +70,9 @@ function serve() {
     });
 }
 
-// HTML 
+// HTML
 function html(cb) {
-    return src(path.src.html, {base: srcPath}) 
+    return src(path.src.html, {base: srcPath})
          //.pipe() - Это 1 конкретное действие, которое мы хотим совершить над нашими файлами.
         .pipe(plumber())
         .pipe(dest(path.build.html))
@@ -81,9 +81,9 @@ function html(cb) {
     cb();
 }
 
-// CSS 
+// CSS
 function css(cb) {
-    return src(srcPath + 'assets/scss/main.scss')  // return src(path.src.css, {base: srcPath + 'assets/scss/'}) 
+    return src(srcPath + 'assets/scss/main.scss')  // return src(path.src.css, {base: srcPath + 'assets/scss/'})
         .pipe(sourcemaps.init())
         .pipe(plumber({
             errorHandler : function(err) {
@@ -121,9 +121,9 @@ function css(cb) {
     cb();
 }
 
-// Для быстрой компиляции CSS во время разработки 
+// Для быстрой компиляции CSS во время разработки
 function cssWatch(cb) {
-    return src(srcPath + 'assets/scss/main.scss') // если нужно компилировать 1 файл, то return src(srcPath + 'assets/scss/main.scss')  
+    return src(srcPath + 'assets/scss/main.scss') // если нужно компилировать 1 файл, то return src(srcPath + 'assets/scss/main.scss')
         .pipe(sourcemaps.init())
         .pipe(plumber({
             errorHandler : function(err) {
@@ -149,7 +149,7 @@ function cssWatch(cb) {
     cb();
 }
 
-// JS 
+// JS
 function js(cb) {
     return src(jsFiles) // если порядок не важен, то берем все файлы: return src(path.src.js, {base: srcPath + 'assets/js/'})
         .pipe(sourcemaps.init())
@@ -173,7 +173,7 @@ function js(cb) {
     cb();
 }
 
-// Для быстрой компиляции JS во время разработки 
+// Для быстрой компиляции JS во время разработки
 function jsWatch(cb) {
     return src(jsFiles) // если порядок не важен, то берем все файлы: return src(path.src.js, {base: srcPath + 'assets/js/'})
         .pipe(sourcemaps.init())
@@ -197,7 +197,7 @@ function jsWatch(cb) {
     cb();
 }
 
-// Images 
+// Images
 function images(cb) {
     return src(path.src.images)
         .pipe(imagemin())
@@ -218,7 +218,7 @@ function images(cb) {
     cb();
 }
 
-// Fonts 
+// Fonts
 function fonts(cb) {
     return src(path.src.fonts)
         .pipe(dest(path.build.fonts))
@@ -227,13 +227,13 @@ function fonts(cb) {
     cb();
 }
 
-// При сборке проекта удаляет папку dist и создает новую со свежими файлами 
+// При сборке проекта удаляет папку dist и создает новую со свежими файлами
 function clean(cb) {
     return del(path.clean);
     cb();
 }
 
-// Для слежки за файлами. Перезагрузит страницу, если что-то изменится 
+// Для слежки за файлами. Перезагрузит страницу, если что-то изменится
 function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], cssWatch);
@@ -244,7 +244,7 @@ function watchFiles() {
 
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts)); // Будет запускаться по команде gulp build
-const watch = gulp.parallel(build, watchFiles, serve); // Будет запускаться по дефолтной команде gulp 
+const watch = gulp.parallel(build, watchFiles, serve); // Будет запускаться по дефолтной команде gulp
 
 
 // Экспорты тасок

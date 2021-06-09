@@ -6,6 +6,8 @@
     line-height: $lineHeight;
     color: $color;
 }
+// @include text(14px, 400, 17px, $linkColor);
+
 
 @mixin media($width, $type:min) {
     @if map_has_key($breakpoints, $width) {

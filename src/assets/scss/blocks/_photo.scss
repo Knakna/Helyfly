@@ -1,21 +1,91 @@
 .photo {
-    background-color: red;
+    padding: 4rem 0 5rem;
 
     .container {
         @extend %container;
     }
-    }
+}
 
 .photo__title {
-    background-color: red;
+    @extend %title;
 
+    padding-bottom: 1.5rem;
 }
 
 .photo__video {
     width: 100%;
+
+    padding-bottom: 2.7rem;
+
+    border-radius: 4px;
 }
 
-.photo__dasc {
-    background-color: red;
+.photo__desc {
+    @include text(1.4rem, 400, 1.4, $textColor);
 
+    padding-bottom: 4rem;
+}
+
+.photo__list {
+    margin-bottom: 2rem;
+
+    border-bottom: 0.5px solid $secondaryColor;
+}
+
+.photo__item {
+    @include text(1.4rem, 500, 1.2, $textColor);
+
+    padding: 0 0 3.4rem 4rem;
+
+    position: relative;
+}
+
+.photo__item-clock {
+    // position: relative;
+
+    background-image: url(./../images/photo-icons/clock.svg);
+
+    // &::before {
+    //     width: 32px;
+    //     height: 32px;
+
+    //     display: block;
+
+    //     position: absolute;
+    //     content: "";
+
+    //     top: 0;
+
+    //     background: url('./../../images/logo.svg') no-repeat 0 8px;
+
+    //     z-index: 5;
+
+    // }
+}
+
+
+.photo__wrap {
+    border-top: 0.5px solid $secondaryColor;
+
+    padding-top: 6rem;
+}
+
+.photo__gallary-title {
+    @include text(26px, 400, 1.2, $textColor);
+    width: 25rem;
+
+    margin: 0 auto 3rem;
+
+    text-align: center;
+}
+
+.photo__gallery {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, auto);
+
+
+    .container {
+        padding-right: 0;
+    }
 }

@@ -9,24 +9,25 @@ $textColorLight: #B3B3B3;
 $linkColor: #5286EC;
 
 //Breakpoints
-$breakpoints: (
-    xs: 576px,
-    sm: 768px,
-    md: 1280px,
-    lg: 1440px
-);
+$breakpoints: (xs: 36rem,
+    sm: 48rem,
+    md: 80rem,
+    lg: 90rem);
 
 // Container
 %container {
     width: 100%;
     padding: 0 15px;
-    @media screen and (min-width: 576px) {
+
+    @include media(xs) {
         padding: 0 35px;
     }
-    @media screen and (min-width: 768px) {
+
+    @include media(sm) {
         padding: 0 50px;
     }
-    @media screen and (min-width: 1280px){
+
+    @include media(md) {
         padding: 0;
         width: 1140px;
         margin: 0 auto;
@@ -34,3 +35,11 @@ $breakpoints: (
 }
 
 // @extend %container;
+
+// title
+%title {
+    @include text(28px, 400, 1.2, $textColor);
+
+    text-align: center;
+}
+// @extend %title;

@@ -3,76 +3,145 @@
     background-image: url('./../images/main-bg.jpg');
     background-size: cover;
     background-position: 62% 0;
+    background-repeat: no-repeat;
+
     @include media(sm) {
-        background-position: center;
-    }
-    .container {
-        @extend %container;
+        background-position: 56% 48%;
+        background-size: 235%;
     }
 
+    @include media(md) {
+        background-position: 51% 50%;
+        background-size: 143%;
+    }
+
+    @include media(lg) {
+        background-size: 127%;
+        background-size: cover;
+
+    }
+
+}
+
+.container {
+    @extend %container;
 }
 
 .main__inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 655px;
+
+    height: 65.5rem;
+
     @include media(sm) {
-        height: 840px;
+        height: 84rem;
     }
 }
-.main__title{
-    @include text(32px, 700, 39px, $primaryColor);
-    max-width: 247px;
+
+.main__title {
+    @include text(3.2rem, 700, 1.3, $primaryColor);
     margin-top: -6px;
-    @include media(sm) {
-        max-width: 596px;
-        font-size: 40px;
-        line-height: 49px;
+
+    max-width: 24.7rem;
+
+
+    @include media(xs) {
+        margin-top: 1rem;
     }
+
+    @include media(sm) {
+        margin-top: 3.5rem;
+
+        max-width: 59.6rem;
+
+        font-size: 4rem;
+        line-height: 1.2;
+    }
+
     @include media(md) {
-        max-width: 887px;
+        max-width: 88.7rem;
         width: 100%;
     }
+
     span {
         color: $accentColor;
     }
 }
+
 .main__price-box {
-    height: 93px;
-    width: 208px;
-    background-image: url(./../images/price-box.svg);
-    background-repeat: no-repeat;
-    margin: 36px 0 11px;
     display: flex;
     justify-content: space-around;
-    padding: 6px 15px;
-    margin-left: -5px;
+
+    margin: 3.6rem 0 1.1rem -.5rem;
+    padding: .6rem 1.5rem;
+
+    height: 9.3rem;
+    width: 20.8rem;
+
+    background-image: url(./../images/price-box1.svg);
+    background-repeat: no-repeat;
+    background-size: 20.8rem;
+
+    @include media(sm) {
+        justify-content: space-between;
+        margin: 20px 0 14px -2px;
+
+        height: 9.6rem;
+        width: 22.4rem;
+        background-size: 22.4rem;
+    }
 }
+
 .main__wrapper {
     display: flex;
     flex-direction: column;
 }
-.main__price-label{
+
+.main__price-label {
     @include text(18px, 400, 1.5, inherit);
+
+    @include media(sm) {
+        letter-spacing: 1.1px;
+    }
 }
+
 .main__price {
     @include text(30px, 800, inherit, inherit);
+
+    @include media(sm) {
+        letter-spacing: 4px;
+        font-weight: 800;
+    }
 }
+
 .main__percent {
+    margin-top: 1rem;
+
+    max-height: 4.7rem;
+
     border-radius: 50%;
     filter: drop-shadow(0px 4px 15px rgba(255, 255, 255, 0.25)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
-    max-height: 47px;
-    margin-top: 10px;
+
     transform: translateX(4px);
+
+    @include media(sm) {
+        margin-right: 2rem;
+    }
 }
+
 .main__btn {
-    width: 275px;
-    height: 68px;
+    width: 27.5rem;
+    height: 6.8rem;
+
     border: 3px solid $primaryColor;
     border-radius: 7px;
     background-color: transparent;
     @include text(16px, 900, 20px, white);
     filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
     transform: translateY(-6px);
+
+    @include media(sm) {
+        width: 30.4rem;
+    }
 }

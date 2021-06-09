@@ -1,0 +1,9 @@
+.star {
+padding-bottom: 1rem;
+
+}
+.star__value {
+@include text(14px, 400, 1.2, $textColor);
+
+padding-left: 5rem;
+}
