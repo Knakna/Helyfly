@@ -1,12 +1,17 @@
+  // import Swiper from 'swiper';
+
+  // import Swiper from "./../../../node_modules/swiper/bundle";
+
+  // import 'swiper/swiper-bundle.css';
+
+  import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 
 
-import SwiperCore, { Navigation, Pagination } from 'swiper/core';
-// import './../node_modules/swiper/swiper-bundle.css';
-
-SwiperCore.use([Navigation, Pagination]);
+  SwiperCore.use([Navigation, Pagination]);
 
 const swiper = new Swiper('.swiper-container', {
   // Optional parameters
+  direction: 'vertical',
   loop: true,
 
   // If we need pagination
@@ -19,8 +24,12 @@ const swiper = new Swiper('.swiper-container', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-});
 
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
 
 
 

@@ -1,9 +1,61 @@
 .star {
-padding-bottom: 1rem;
+    padding: 1.5rem 0 1rem;
+
+    position: relative;
+
+    border-bottom: 0.5px solid $secondaryColor;
+    border-top: 0.5px solid $secondaryColor;
+
+    &::before {
+        width: 3.7rem;
+        height: 4.4rem;
+
+        position: absolute;
+
+        content: "";
+        top: 13px;
+        left: -2px;
+        background: url(./../images/photo-icons/cup.svg)no-repeat;
+    }
+
+    @include media(xs) {
+        display: grid;
+        grid-template-columns: 62% auto;
+
+        padding: 2.5rem 0 3rem;
+    }
+
+    @include media(sm) {
+        grid-template-columns: 47% auto;
+    }
+
+    @include media(md) {
+        grid-template-columns: 27% auto;
+    }
+
 
 }
-.star__value {
-@include text(14px, 400, 1.2, $textColor);
 
-padding-left: 5rem;
+.star__value {
+    @include text(14px, 400, 1.2, $textColor);
+
+    padding-left: 4.6rem;
+
+    @include media(xs) {
+        font-size: 1.8rem;
+    }
+
+    @include media(md) {
+        line-height: 1;
+        letter-spacing: -1.7px;
+    }
+}
+
+.star__bold {
+    @include text(14px, 500, 1.2, $textColor);
+
+    @include media(xs) {
+        font-size: 1.8rem;
+    }
+
 }

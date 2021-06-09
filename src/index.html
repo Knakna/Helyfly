@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="assets/css/style.min.css">
     <title>Helyfly</title>
 </head>
@@ -65,8 +67,9 @@
         <div class="container">
             <div class="photo__inner">
 
-                <h2 class="photo__title">Фотосессия <br/> в&#160;вертолете</h2>
-                <video class="photo__video" src="#" controls poster="./assets/images/video.jpg"></video>
+                <h2 class="photo__title">Фотосессия <br /> в&#160;вертолете</h2>
+                <video class="photo__video" src="#" poster="./assets/images/video.jpg">
+                </video>
                 <div class="photo__desc">
                     Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф
                     запечатлит лучшие моменты!
@@ -83,7 +86,9 @@
 
             <div class="star">
                 <span class="star__value">
-                    Более 150 отзывов с оценкой
+                    Более
+                    <span class="star__bold">50</span>
+                    отзывов с оценкой
                 </span>
 
                 <!-- rating -->
@@ -104,22 +109,38 @@
 
             </div>
 
+        </div>
 
+        <div class="photo__wrap">
 
-            <div class="photo__wrap">
+            <h3 class="photo__gallary-title">Фотографии
+                пакета</h3>
 
-                <h3 class="photo__gallary-title">Фотографии
-                    пакета</h3>
+            <div class="photo__gallery">
+                <img class="photo__img" src="./assets/images/gallery/helicopter.jpg" alt="image">
 
-                <div class="photo__gallery">
-                    <img class="photo__img" src="./assets/images/gallery/img1.jpg" alt="image">
+                <img class="photo__img" src="./assets/images/gallery/helicopter.jpg" alt="image">
 
-                    <img class="photo__img" src="./assets/images/gallery/img1.jpg" alt="image">
+                <img class="photo__img" src="./assets/images/gallery/woman.jpg" alt="image">
 
-                </div>
+                <img class="photo__img" src="./assets/images/gallery/field.jpg" alt="image">
 
+                <img class="photo__img" src="./assets/images/gallery/kiss.jpg" alt="image">
+
+                <img class="photo__img" src="./assets/images/gallery/kiss.jpg" alt="image">
+
+                <img class="photo__img" src="./assets/images/gallery/field.jpg" alt="image">
+
+                <img class="photo__img" src="./assets/images/gallery/kiss.jpg" alt="image">
 
             </div>
+
+            <button class="photo__btn">Показать все фото</button>
+
+        </div>
+
+
+
 
     </section> <!-- /.photo -->
 
@@ -234,25 +255,25 @@
 
 
 
-<!-- -------swiper------ -->
+        <!-- -------swiper------ -->
 
-<!-- Slider main container -->
-<div class="swiper-container">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
-    ...
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-</div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
 
 
 
@@ -366,7 +387,7 @@
                     <li class="social__item">
                         <a class="social__link" href="#" target="_blank">
                             <svg class="social__img">
-                                <use xlink:href="/sprite.svg#Pinterest"> </use>
+                                <!-- <use xlink:href="/sprite.svg#Pinterest"> </use> -->
                             </svg>
                         </a>
                     </li>
@@ -374,7 +395,7 @@
                     <li class="social__item">
                         <a class="social__link" href="#" target="_blank">
                             <svg class="social__img">
-                                <use xlink:href="/sprite.svg#facebook"> </use>
+                                <!-- <use xlink:href="/sprite.svg#facebook"> </use> -->
                             </svg>
                         </a>
                     </li>
@@ -382,7 +403,7 @@
                     <li class="social__item">
                         <a class="social__link" href="#" target="_blank">
                             <svg class="social__img">
-                                <use xlink:href="/sprite.svg#instagram"> </use>
+                                <!-- <use xlink:href="/sprite.svg#instagram"> </use> -->
                             </svg>
                         </a>
                     </li>
@@ -431,9 +452,9 @@
 
 
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
-    <script src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
 </body>
 
 </html>
