@@ -1,17 +1,11 @@
-  // import Swiper from 'swiper';
 
-  // import Swiper from "./../../../node_modules/swiper/bundle";
+function test(a, b) {
+    return a + b
+}
 
-  // import 'swiper/swiper-bundle.css';
-
-  import SwiperCore, { Navigation, Pagination } from 'swiper/core';
-
-
-  SwiperCore.use([Navigation, Pagination]);
 
 const swiper = new Swiper('.swiper-container', {
   // Optional parameters
-  direction: 'vertical',
   loop: true,
 
   // If we need pagination
@@ -30,11 +24,3 @@ const swiper = new Swiper('.swiper-container', {
     el: '.swiper-scrollbar',
   },
 });
-
-
-
-
-
-function test(a, b) {
-    return a + b
-}

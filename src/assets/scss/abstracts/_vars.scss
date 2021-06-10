@@ -10,10 +10,10 @@ $linkColor: #5286EC;
 
 //Breakpoints
 $breakpoints: (
-    xs: 36rem,
-    sm: 48rem,
-    md: 80rem,
-    lg: 90rem);
+    xs: 36rem, // 576
+    sm: 48rem, // 768
+    md: 80rem, // 1280
+    lg: 90rem); // 1440
 
 // Container
 %container {
@@ -44,3 +44,10 @@ $breakpoints: (
     text-align: center;
 }
 // @extend %title;
+
+%btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+//

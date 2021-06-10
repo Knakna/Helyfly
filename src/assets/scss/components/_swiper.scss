@@ -1,6 +1,50 @@
-// @import '../../../node_modules/swiper/swiper-bundle.css';
+.swiper {
+  margin: 0 auto;
+  padding: 5rem 0;
+
+  text-align: center;
+}
 
 .swiper-container {
-  width: 600px;
+  min-width: 2.74rem;
   height: 300px;
+  width: 100%;
+}
+
+.swiper-question {
+  @include text(1.6rem, 500, 1.4, $textColor);
+
+  display: block;
+
+}
+
+.swiper-city {
+  @include text(1.4rem, 400, 1.4, $textColor);
+
+  display: block;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+
+  background-color: transparent;
+
+  border: 1px solid $textColorLight;
+}
+
+.swiper-pagination-bullet-active {
+  border: 1px solid transparent;
+  background-color: $accentColor;
+
+}
+
+.swiper-button-prev {
+  width: 19px;
+  height: 10px;
+}
+
+.swiper-button-next {
+  width: 19px;
+  height: 10px;
 }

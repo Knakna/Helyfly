@@ -19,6 +19,9 @@
 .vsc-controller {
     position: absolute;
 }
+#controller {
+    display: none;
+}
 
 .photo__title {
     @include text(28px, 400, 1.2, $textColor);
@@ -233,9 +236,7 @@
 
     margin: 5rem auto 2.7rem;
 
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+    @extend %btn;
     @include text(1.7rem, 500, 1.2, $linkColor);
     letter-spacing: 1.1px;
 

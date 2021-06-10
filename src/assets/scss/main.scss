@@ -13,9 +13,11 @@
 
 html,
 body {
+    min-width: 320px;
+
     font-family: 'Montserrat', sans-serif;
     font-size: 62.5%;
-    min-width: 320px;
+    // background-color: #E5E5E5;
 }
 
 @import "./blocks/header";
@@ -24,4 +26,8 @@ body {
 @import "./components/rating";
 @import "./components/swiper";
 @import "./components/star";
+@import "./blocks/info";
+@import "./components/map";
+
+
 

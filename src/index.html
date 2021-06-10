@@ -105,11 +105,9 @@
 
                     </div>
                 </div> <!-- /.rating -->
+            </div> <!-- /.star -->
 
-
-            </div>
-
-        </div>
+        </div> <!-- /.container -->
 
         <div class="photo__wrap">
 
@@ -137,9 +135,7 @@
 
             <button class="photo__btn">Показать все фото</button>
 
-        </div>
-
-
+        </div> <!-- /.photo__wrap -->
 
 
     </section> <!-- /.photo -->
@@ -150,20 +146,20 @@
     <section class="info">
         <div class="container">
 
-            <div class="info__autor">
+            <div class="info__author">
                 <div class="info__avatar">
-                    <img class="info__img" src="" alt="avatar">
+                    <img class="info__img" src="./assets/images/info/avatara.jpg" alt="avatar">
                     <h2 class="info__name">Марина Иванова</h2>
                     <span class="info__career">Фотограф</span>
-                    <button class="info__more-info">Показать больше
-                        информации о фотографе</button>
+                    <button class="info__more-info">Показать больше информации о фотографе</button>
                 </div>
 
                 <div class="info__text">
 
                     <h3 class="info__about">Об организаторе:</h3>
 
-                    <p class="info__desc">Всем привет! Я фотограф Мария! И по мимо фотосъемки я так же являюсь
+                    <p class="info__desc info__desc-p">Всем привет! Я фотограф Мария! И по мимо фотосъемки я так же
+                        являюсь
                         членом группы экспертов туристической отрасли, которые хорошо разбираются
                         в маркетинге, операциях
                         и услугах обслуживания клиентов, специализирующихся
@@ -172,33 +168,34 @@
                     </p>
                     <p class="info__desc"> Сначала мы (я и моя команда) изучаем интересы клиентов, а затем
                         придумываем подходящее решение, которое соответствует бюджету и планам клиента.
-                        Мы никогда не зависим
-                        от субпоставщиков
+                        Мы&#160;никогда&#160;не зависим
+                        от&#160;субпоставщиков
+                        <br />
                         и не свяжемся…</p>
 
                     <button class="info__more">Читать еще</button>
 
 
 
-                    <h3 class="info__provide">Об организаторе:</h3>
+                    <h3 class="info__about">Что я предоставлю:</h3>
 
                     <p class="info__desc">Встречу вас на машине после длительного перелёта.
                         Качественный подбор места
                         и локации для вашей съемки.
-                        При необходимости всегда возможно прерваться
+                        При&#160необходимости всегда возможно прерваться
                         на обед/ужин.
                         Более 50 фотографий на выходе
                         с обработкой и замечательные впечатления о Дубае!
                     </p>
 
                     <button class="info__more">Читать еще</button>
-                </div>
-            </div>
+                </div> <!-- /.info__text -->
+            </div> <!-- /.info__author -->
 
 
             <div class="calendar">
-                <h2 class="calendar-title">Доступная съемка
-                    в ближайщее время</h2>
+                <h2 class="calendar__title">Доступная съемка
+                    в&#160ближайщее время</h2>
 
                 <time class="calendar__date" datetime="2019-04-29 18:00">Пятница, 14 сентября</time>
 
@@ -220,7 +217,7 @@
                     <button class="calendar__btn">Выбрать</button>
                 </div>
 
-            </div>
+            </div> <!-- /.calendar -->
 
             <!---------- star---------->
 
@@ -242,39 +239,70 @@
 
                     </div>
                 </div> <!-- /.rating -->
-
-            </div>
+            </div> <!-- /.star -->
         </div> <!-- /.container -->
+
+
+        <!-------map-------->
 
         <div class="map">
             <span class="map__meet">Встречаемся тут!</span>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11072.536734891897!2d37.60467020954889!3d55.75538929716119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a4efe4aef13%3A0xd2f4d26837940111!2z0JrQvtC90YHQtdGA0LLQsNGC0L7RgNC40Y8!5e0!3m2!1sru!2sby!4v1623140909860!5m2!1sru!2sby"
-                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81199.81497412064!2d37.56542983953993!3d55.769159122354615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a473ae3d27b%3A0x1ac16a6e2f009be7!2z0KLQstC10YDRgdC60LDRjw!5e0!3m2!1sru!2sby!4v1623319520996!5m2!1sru!2sby"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
 
 
         <!-- -------swiper------ -->
 
-        <!-- Slider main container -->
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                ...
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+        <div class="swiper">
+            <div class="container">
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-content">
+                                <img class="swiper-img" src="./assets/images/swiper.svg" alt="number">
+                                <span class="swiper-question">Где встречаемся?</span>
+                                <span class="swiper-city">Москва</span>
+                            </div>
+                        </div> <!-- /.swiper-slide -->
 
+
+                        <div class="swiper-slide">
+                            <div class="swiper-content">
+                                <img class="swiper-img" src="./assets/images/swiper.svg" alt="number">
+                                <span class="swiper-question">Где встречаемся?</span>
+                                <span class="swiper-city">Москва</span>
+                            </div>
+                        </div> <!-- /.swiper-slide -->
+
+
+                        <div class="swiper-slide">
+                            <div class="swiper-content">
+                                <img class="swiper-img" src="./assets/images/swiper.svg" alt="number">
+                                <span class="swiper-question">Где встречаемся?</span>
+                                <span class="swiper-city">Москва</span>
+                            </div>
+                        </div> <!-- /.swiper-slide -->
+
+                    </div> <!-- /.swiper-wrapper -->
+
+
+
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div> <!-- /.container-->
+        </div> <!-- /.swiper-->
 
 
     </section> <!-- /.info -->
@@ -454,7 +482,16 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script type="module" src="assets/js/script.js"></script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+
+
+
+
+      </script>
+
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
