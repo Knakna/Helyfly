@@ -1,0 +1,90 @@
+.info__author {
+
+    .avatar {
+        position: relative;
+
+        max-width: 20rem;
+
+        margin: 0 auto;
+
+        text-align: center;
+
+        &::before {
+            width: 31px;
+            height: 27px;
+
+            position: absolute;
+
+            content: "";
+            top: -12px;
+            right: -48px;
+            background: url(./../images/info/heart.svg) no-repeat;
+
+
+        }
+    }
+
+    .avatar__img {
+        width: 139px;
+        height: 139px;
+
+        margin-bottom: 2rem;
+
+        border-radius: 50%;
+    }
+
+    .avatar__name {
+        @include text(1.8rem, 500, 1.1, $textColor);
+
+        margin-bottom: 1rem;
+    }
+
+    .avatar__career {
+        @include text(1.4rem, 400, 2.2, $textColor);
+
+        margin-bottom: 1rem;
+    }
+
+    .avatar__more-info {
+        @include text(1.4rem, 500, 1.5, $linkColor);
+        @extend %btn;
+        margin-bottom: 2rem;
+    }
+}
+
+.info__swiper {
+    padding: 2rem 1rem 0 3rem;
+
+.avatar {
+    display: flex;
+}
+
+.avatar__img {
+    width: 67px;
+    height: 67px;
+}
+
+.avatar__inner {
+    text-align: left;
+    padding-left: 1.5rem;
+}
+.avatar__name {
+    @include text(1.6rem, 500, 1.1, $textColor);
+}
+
+.avatar__career {
+    @include text(1.4rem, 400, 2.2, $textColor);
+
+    margin-bottom: 1rem;
+}
+
+.avatar__more-info {
+    @include text(1.4rem, 500, 1.5, $linkColor);
+    @extend %btn;
+    padding-bottom: 1.5rem;
+
+    text-align: left;
+    letter-spacing: 1.1px;
+}
+
+}

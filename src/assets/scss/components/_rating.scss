@@ -10,7 +10,7 @@
 	@include media(xs) {
 		// padding-left: 0;
 
-    }
+	}
 
 }
 
@@ -38,4 +38,10 @@
 .rating-result>span.active {
 	color: $accentColor;
 	text-shadow: 1px 1px #c60;
+}
+
+.reviews {
+	.rating {
+		padding-left: 0;
+	}
 }

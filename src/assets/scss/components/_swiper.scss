@@ -3,14 +3,29 @@
   padding: 5rem 0;
 
   text-align: center;
+  .container {
+    padding: 0 23px;
+  }
 }
 
 .swiper-container {
-  min-width: 2.74rem;
-  height: 300px;
+  // min-width: 2.74rem;
+
+  min-height: 21rem;
   width: 100%;
+
+  padding: 5rem 1rem;
+
 }
 
+.swiper-inner {
+  border: 1px solid $secondaryColor;
+
+}
+
+.swiper-img {
+  padding-bottom: 1.5rem;
+}
 .swiper-question {
   @include text(1.6rem, 500, 1.4, $textColor);
 
@@ -19,7 +34,7 @@
 }
 
 .swiper-city {
-  @include text(1.4rem, 400, 1.4, $textColor);
+  @include text(1.4rem, 400, 2, $textColor);
 
   display: block;
 }
@@ -48,3 +63,17 @@
   width: 19px;
   height: 10px;
 }
+
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 17px;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  position: relative;
+
+  font-size: 18px;
+  top: -13px;
+  left: 0px;
+}
+

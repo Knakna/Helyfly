@@ -59,3 +59,19 @@
     }
 
 }
+
+
+.info {
+    .star {
+        padding: 3.5rem 1rem 2rem 3rem;
+
+        &::before {
+        top: 30px;
+        left: 20px;
+    }
+    }
+
+    .star__value {
+        letter-spacing: -.7px;
+    }
+}

@@ -1,0 +1,60 @@
+.reviews {
+    padding: 1rem 0;
+
+    text-align: center;
+}
+
+.reviews__title {
+    @include text(2.6rem, 400, 1.4px, $textColor);
+
+    padding-bottom: 7rem;
+
+}
+
+
+
+.reviews__author {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 1.6rem 0rem;
+}
+
+.reviews__avatar {
+    width: 8.4rem;
+    height: 8.4rem;
+}
+
+.reviews__wrap {
+    padding-left: 1.5rem;
+
+    text-align: left;
+}
+
+.reviews__name {
+    @include text(1.6rem, 500, 1.1, $textColor);
+}
+
+.reviews__career {
+    @include text(1.4rem, 400, 2.2, $textColor);
+
+    margin-bottom: 1rem;
+}
+
+.reviews__value {
+    @include text(1.4rem, 500, 1.5, $linkColor);
+
+    grid-column: span 2;
+
+}
+
+.reviews__text {
+    @include text(1.4rem, 400, 1.5, $textColor);
+    grid-column: span 2;
+
+    text-align: left;
+}
+
+.reviews__date {
+    @include text(1.4rem, 400, 2.2, $textColor);
+    grid-column: span 2;
+}

@@ -1,4 +1,61 @@
 .map {
+	position: relative;
+
 	min-height: 43rem;
 	width: 100%;
+
+	padding-top: 4rem;
+}
+
+.map__meet {
+	@include text(1.1rem, 700, 1.2, $textColor);
+
+	width: 15rem;
+	height: 5rem;
+
+	padding: 1.1rem;
+
+	position: absolute;
+	top: 14.2rem;
+	left: 11rem;
+
+	background-color: #fff;
+
+	z-index: 2;
+
+
+	&::after {
+		position: absolute;
+		content: ' ';
+		width: 0;
+		height: 0;
+		border-left: 11px solid transparent;
+		border-right: 11px solid transparent;
+		border-top: 14px solid #fff;
+		top: 49px;
+		left: 46px;
+		z-index: 3;
+	}
+
+}
+
+
+.map__close::before,
+.map__close::after {
+	position: absolute;
+	left: 24.3rem;
+	top: 15.6rem;
+	content: ' ';
+	height: 15px;
+	width: 1px;
+	background-color: $textColorLight;
+	z-index: 3;
+}
+
+.map__close:before {
+	transform: rotate(45deg);
+}
+
+.map__close:after {
+	transform: rotate(-45deg);
 }
