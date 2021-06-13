@@ -1,0 +1,15 @@
+.social__list {
+    display: flex;
+    align-items: center;
+}
+
+.social__img {
+    fill: #4A68AD;
+    width: 27px;
+    height: 26px;
+
+    :hover {
+        fill: #37373F;
+    }
+}
+

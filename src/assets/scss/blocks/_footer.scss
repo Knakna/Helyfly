@@ -1,0 +1,60 @@
+.footer {
+    padding-top: 5rem;
+}
+
+.footer__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 2rem;
+}
+
+.footer__bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 0;
+
+    justify-items: center;
+}
+
+.footer__cards {
+    justify-self: start;
+
+    display: flex;
+    align-items: center;
+
+
+
+}
+
+
+.footer__lang {
+    @extend %btn;
+
+    justify-self: end;
+
+    text-transform: uppercase;
+}
+
+
+.footer__mc {
+
+    margin-right: 1.6rem;
+}
+
+.footer__support,
+.footer__tel {
+    @include text(1.4rem, 400, 1.2, $textColorLight);
+
+    grid-column: span 2;
+}
+
+
+
+.footer__copy {
+
+    @include text(1.4rem, 400, 1.2, $textColorLight);
+
+    grid-column: span 2;
+}
