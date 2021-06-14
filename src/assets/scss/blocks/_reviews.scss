@@ -8,6 +8,11 @@
     @include text(2.6rem, 400, 1.4px, $textColor);
 
     padding-bottom: 3rem;
+
+    @include media(sm) {
+        text-align-last: left;
+    }
+
 }
 
 
@@ -21,11 +26,19 @@
 
     border-bottom: 0.5px solid $secondaryColor;
 
+    @include media(sm) {
+    grid-template-columns: 15% 85%;
+
+    }
 }
 
 .reviews__avatar {
     width: 8.4rem;
     height: 8.4rem;
+
+    @include media(sm) {
+        grid-row: span 3;
+    }
 }
 
 .reviews__wrap {
@@ -51,6 +64,9 @@
 
     position: relative;
 
+    text-align: left;
+    padding-left: 2rem;
+
     &::before {
         width: 17px;
         height: 15px;
@@ -62,7 +78,7 @@
         left: -4px;
         background: url(./../images/check.svg) no-repeat;
     }
-   
+
 }
 
 .reviews__text {

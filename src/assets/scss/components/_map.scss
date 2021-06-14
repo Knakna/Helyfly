@@ -7,6 +7,21 @@
 	padding-top: 4rem;
 }
 
+.map__small {
+	 @include media(xs) {
+		 display: none;
+	 }
+}
+
+.map__big {
+	display: none;
+
+	@include media(xs) {
+		display: block;
+	}
+
+}
+
 .map__meet {
 	@include text(1.1rem, 700, 1.2, $textColor);
 

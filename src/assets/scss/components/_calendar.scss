@@ -1,25 +1,60 @@
+.calendar {
+    padding: 2rem 0 0;
+}
 
-    .calendar {
-        padding: 2rem 0 0;
-    }
+.calendar__title {
+    @include text(2.6rem, 400, 1.2, $textColor);
 
-    .calendar__title {
-        @include text(2.6rem, 400, 1.2, $textColor);
+    margin-bottom: 4rem;
+    text-align: center;
 
-        margin-bottom: 4rem;
-        text-align: center;
-    }
+    @include media(xs) {
+        margin: 3rem auto 6rem;
 
-    .calendar__date {
-        @include text(1.8rem, 500, 1.4, $textColor);
-
-        display: block;
-
-        padding: 1.8rem 0 2rem;
+        max-width: 30rem;
 
         border-top: 0.5px solid $secondaryColor;
-        text-align: center;
     }
+}
+
+.calendar__date {
+    @include text(1.8rem, 500, 1.4, $textColor);
+
+    display: block;
+
+    padding: 1.8rem 0 2rem;
+
+    position: relative;
+
+    border-top: 0.5px solid $secondaryColor;
+    text-align: center;
+
+    &::after {
+        display: none;
+
+        width: 35px;
+        height: 35px;
+
+        position: absolute;
+
+        content: "";
+        top: 17px;
+        left: 237px;
+        background: url(./../images/calendar.svg) no-repeat;
+
+        @include media(xs) {
+            display: block;
+        }
+
+    }
+
+
+    @include media(xs) {
+        padding-left: 2rem;
+        text-align-last: left;
+
+    }
+}
 
     .calendar__box {
         border-top: 0.5px solid $secondaryColor;

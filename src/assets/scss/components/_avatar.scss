@@ -19,8 +19,10 @@
             top: -12px;
             right: -48px;
             background: url(./../images/info/heart.svg) no-repeat;
+        }
 
-
+        @include media(sm) {
+            order: 1;
         }
     }
 
@@ -54,6 +56,9 @@
 
 .info__swiper {
     padding: 2rem 1rem 0 3rem;
+
+    @include media(xs) {padding: 2rem 6rem 0 9rem;
+    }
 
 .avatar {
     display: flex;

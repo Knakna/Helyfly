@@ -16,11 +16,31 @@
 
   padding: 5rem 1rem;
 
+  @include media(xs) {
+    width: 82%;
+
+    margin: 0 auto;
+  }
+
 }
 
 .swiper-inner {
   border: 1px solid $secondaryColor;
 
+  @include media(xs) {
+    width: 77%;
+
+    margin: 0 auto;
+  }
+
+  @include media(sm) {
+    width: 55%;
+  }
+
+}
+
+.swiper-slide {
+  width: 40rem;
 }
 
 .swiper-img {
@@ -57,11 +77,20 @@
 .swiper-button-prev {
   width: 19px;
   height: 10px;
+
+  left: 40px;
+
+  color: $secondaryColor;
 }
 
 .swiper-button-next {
   width: 19px;
   height: 10px;
+
+  right: 40px;
+
+  color: $secondaryColor;
+
 }
 
 

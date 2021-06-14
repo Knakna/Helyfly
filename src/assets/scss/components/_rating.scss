@@ -44,4 +44,10 @@
 	.rating {
 		padding-left: 0;
 	}
+
+	.rating-result {
+	@include media(sm) {
+        margin-left: 0;
+    }
+}
 }

@@ -1,6 +1,15 @@
+.social {
+    width: 15rem;
+
+    
+}
+
 .social__list {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
 }
 
 .social__img {

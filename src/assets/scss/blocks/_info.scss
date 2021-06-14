@@ -2,9 +2,12 @@
     padding: 2rem 0 0;
 }
 
-    // .info__author {
-
-    // }
+    .info__author {
+        @include media(md) {
+            display: grid;
+            grid-template-columns: 55% 45%;
+        }
+    }
 
     .info__about {
         @include text(1.8rem, 500, 1.4, $textColor);

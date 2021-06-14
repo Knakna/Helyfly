@@ -1,5 +1,5 @@
 .footer {
-    padding-top: 5rem;
+    padding: 5rem 0 3rem;
 }
 
 .footer__top {
@@ -8,6 +8,8 @@
     justify-content: space-between;
 
     padding-bottom: 2rem;
+
+    border-bottom: 0.5px solid #C7C7C7;
 }
 
 .footer__bottom {
@@ -16,6 +18,13 @@
     gap: 2rem 0;
 
     justify-items: center;
+
+    padding-top: 2rem;
+
+    @include media(xs) {
+    grid-template-columns: 1fr auto 1fr;
+
+    }
 }
 
 .footer__cards {
@@ -24,8 +33,10 @@
     display: flex;
     align-items: center;
 
+    @include media(xs) {
+        grid-row: span 2;
 
-
+        }
 }
 
 
@@ -35,6 +46,12 @@
     justify-self: end;
 
     text-transform: uppercase;
+
+    @include media(xs) {
+        grid-row: span 2;
+
+        }
+
 }
 
 
@@ -48,6 +65,11 @@
     @include text(1.4rem, 400, 1.2, $textColorLight);
 
     grid-column: span 2;
+
+    @include media(xs) {
+        grid-area: 1/2/2/3;
+
+        }
 }
 
 
@@ -57,4 +79,9 @@
     @include text(1.4rem, 400, 1.2, $textColorLight);
 
     grid-column: span 2;
+
+    @include media(xs) {
+        grid-area: 2/2/3/3;
+
+        }
 }
