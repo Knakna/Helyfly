@@ -29,7 +29,7 @@ const path = {
         html:   srcPath + "*.html",
         js:     srcPath + "assets/js/*.js",
         css:    srcPath + "assets/scss/**/*.scss",
-        images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
+        images: srcPath + "assets/images/**/*.{jpeg,jpg,png,svg,webp}",
         fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     // В эти папки будут собираться файлы
@@ -200,18 +200,17 @@ function jsWatch(cb) {
 // Images
 function images(cb) {
     return src(path.src.images)
-        .pipe(imagemin())
-        // .pipe(imagemin([
-        //     imagemin.gifsicle({interlaced: true}),
-        //     imagemin.mozjpeg({quality: 95, progressive: true}),
-        //     imagemin.optipng({optimizationLevel: 5}),
-        //     imagemin.svgo({
-        //         plugins: [
-        //             { removeViewBox: true },
-        //             { cleanupIDs: false }
-        //         ]
-        //     })
-        // ]))
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.mozjpeg({quality: 95, progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: true },
+                    { cleanupIDs: false }
+                ]
+            })
+        ]))
         .pipe(dest(path.build.images))
         .pipe(browserSync.reload({stream: true}));
 
