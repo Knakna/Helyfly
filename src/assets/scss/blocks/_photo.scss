@@ -18,10 +18,12 @@
 
 .vsc-controller {
     position: absolute;
-}
-#controller {
     display: none;
+
 }
+// #controller {
+//     display: none;
+// }
 
 .photo__title {
     @include text(28px, 400, 1.2, $textColor);

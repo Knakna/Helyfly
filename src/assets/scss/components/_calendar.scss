@@ -42,6 +42,8 @@
         left: 237px;
         background: url(./../images/calendar.svg) no-repeat;
 
+        cursor: pointer;
+        
         @include media(xs) {
             display: block;
         }
