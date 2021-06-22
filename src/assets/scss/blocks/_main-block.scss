@@ -140,8 +140,24 @@
     @include text(16px, 900, 20px, white);
     filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
     transform: translateY(-6px);
+    transition: all .3s linear;
+
+    &:hover {
+        border-color: lighten($accentColor, 15%);
+    }
+
+    &:active {
+        border-color: darken($accentColor, 5%);
+    }
+
 
     @include media(sm) {
         width: 30.4rem;
+    }
+
+    @include media(md) {
+        color: $accentColor;
+        border-color: $accentColor;
+        text-transform: uppercase;
     }
 }

@@ -2,52 +2,54 @@
     padding: 2rem 0 0;
 }
 
-    .info__author {
-        @include media(md) {
-            display: grid;
-            grid-template-columns: 55% 45%;
-        }
+.info__author {
+    border-bottom: 0.5px solid #C7C7C7;
+    padding-bottom: 3rem;
+
+    @include media(md) {
+        display: grid;
+        grid-template-columns: 55% 45%;
+    }
+}
+
+.info__about {
+    @include text(1.8rem, 500, 1.4, $textColor);
+
+    margin-bottom: 1rem;
+
+
+}
+
+.info__desc {
+    @include text(1.6rem, 400, 1.5, $textColor);
+    padding-bottom: 2rem;
+
+}
+
+.info__desc-p {
+    padding-bottom: 3rem;
+}
+
+
+.info__more {
+    @include text(1.6rem, 500, 1.4, $linkColor);
+
+    @extend %btn;
+
+    position: relative;
+
+    margin-bottom: 2.2rem;
+
+    &::after {
+        width: 11px;
+        height: 6px;
+
+        position: absolute;
+
+        content: "";
+        top: 8px;
+        right: -33px;
+        background: url(./../images/photo-icons/arrow.svg) no-repeat;
     }
 
-    .info__about {
-        @include text(1.8rem, 500, 1.4, $textColor);
-
-        margin-bottom: 1rem;
-
-
-    }
-
-    .info__desc {
-        @include text(1.6rem, 400, 1.5, $textColor);
-        padding-bottom: 2rem;
-
-    }
-
-    .info__desc-p {
-        padding-bottom: 3rem;
-    }
-
-
-    .info__more {
-        @include text(1.6rem, 500, 1.4, $linkColor);
-
-        @extend %btn;
-
-        position: relative;
-
-        margin-bottom: 2.2rem;
-
-        &::after {
-            width: 11px;
-            height: 6px;
-
-            position: absolute;
-
-            content: "";
-            top: 8px;
-            right: -33px;
-            background: url(./../images/photo-icons/arrow.svg) no-repeat;
-        }
-
-    }
-
+}

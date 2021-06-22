@@ -13,7 +13,7 @@
 
         max-width: 30rem;
 
-        border-top: 0.5px solid $secondaryColor;
+        // border-top: 0.5px solid $secondaryColor;
     }
 }
 
@@ -43,7 +43,7 @@
         background: url(./../images/calendar.svg) no-repeat;
 
         cursor: pointer;
-        
+
         @include media(xs) {
             display: block;
         }
@@ -58,49 +58,59 @@
     }
 }
 
-    .calendar__box {
-        border-top: 0.5px solid $secondaryColor;
+.calendar__box {
+    border-top: 0.5px solid $secondaryColor;
+}
+
+.calendar__time {
+    @include text(1.8rem, 400, 1.4, $textColor);
+
+    display: block;
+
+    padding: 2.2rem 2rem 2rem;
+
+
+
+}
+
+.calendar__price {
+    @include text(1.8rem, 600, 1.1, $textColor);
+
+    display: block;
+
+    padding: 0 2rem .5rem;
+
+
+
+}
+
+.calendar__place {
+    @include text(1.8rem, 400, 1.4, $textColor);
+
+    display: block;
+
+    padding: 0 2rem 2rem;
+
+}
+
+.calendar__btn {
+    @include text(1.4rem, 500, 1.1, $accentColor);
+    width: 13rem;
+    height: 5rem;
+
+    margin: 0 2rem 3rem;
+
+    border: 2px solid $accentColor;
+    border-radius: 3px;
+    background-color: transparent;
+    transition: all .3s linear;
+
+
+    &:hover {
+        border-color: lighten($accentColor, 15%);
     }
 
-    .calendar__time {
-        @include text(1.8rem, 400, 1.4, $textColor);
-
-        display: block;
-
-        padding: 2.2rem 2rem 2rem;
-
-
-
+    &:active {
+        border-color: darken($accentColor, 5%);
     }
-
-    .calendar__price {
-        @include text(1.8rem, 600, 1.1, $textColor);
-
-        display: block;
-
-        padding: 0 2rem .5rem;
-
-
-
-    }
-
-    .calendar__place {
-        @include text(1.8rem, 400, 1.4, $textColor);
-
-        display: block;
-
-        padding: 0 2rem 2rem;
-
-    }
-
-    .calendar__btn {
-        @include text(1.4rem, 500, 1.1, $accentColor);
-        width: 13rem;
-        height: 5rem;
-
-        margin: 0 2rem 3rem;
-
-        border: 2px solid $accentColor;
-        border-radius: 3px;
-        background-color: transparent;
-    }
+}
