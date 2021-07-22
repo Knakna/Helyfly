@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <title>Helyfly</title>
+</head>
+
+<body>
+
+
+    <!------ sprite svg ----->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+
+        <symbol id="vk" viewBox="0 0 27 16">
+            <g>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M25.0593 1.34867C25.1479 1.37635 25.229 1.42341 25.2971 1.48645C25.3652 1.54949 25.4189 1.62691 25.4534 1.71309C25.4878 1.79928 25.5027 1.89206 25.4968 1.9847C25.4909 2.07734 25.4642 2.16751 25.4192 2.24866C25.2992 2.48166 25.1691 2.70866 25.0491 2.93566C25.0476 3.01518 25.0268 3.09315 24.9885 3.16284C24.9502 3.23253 24.8957 3.29185 24.8293 3.33567C23.725 5.34283 22.4432 7.24708 20.9992 9.02565C20.9944 9.02718 20.9901 9.02991 20.9866 9.03359C20.9831 9.03726 20.9805 9.04176 20.9792 9.04666C22.6492 10.2297 26.6392 13.2467 24.6892 14.9467C23.6692 15.8397 20.7091 15.6897 19.5691 15.1837C18.9084 14.8445 18.2934 14.4227 17.739 13.9287C16.759 13.1387 16.4891 13.1847 15.6091 14.0287C14.4791 15.1137 13.8494 15.8007 12.1794 15.6037C10.1849 15.2559 8.32981 14.3499 6.82933 12.9907C3.4438 10.0424 1.05985 6.11326 0.00901499 1.74866C-0.00445804 1.68078 -0.00269686 1.61079 0.0134095 1.54349C0.0295159 1.47619 0.0600229 1.41316 0.102765 1.35874C0.145507 1.30431 0.199402 1.25978 0.260968 1.22818C0.322534 1.19658 0.390073 1.17866 0.45921 1.17566C0.47921 1.17566 0.479249 1.16566 0.499249 1.16066C2.07974 0.876886 3.69259 0.819304 5.28929 0.989657C5.41579 1.00538 5.53429 1.05947 5.62913 1.14466C5.67589 1.16345 5.71727 1.19371 5.74925 1.23265C6.97925 2.71465 7.51905 4.67166 8.79905 6.11266C9.41905 6.81266 9.61942 6.69666 9.67943 5.73566C9.70775 5.32324 9.71086 4.90948 9.68919 4.49666C9.62919 3.41766 9.24909 2.47266 9.08909 1.42366C9.05895 1.28631 9.08441 1.14261 9.15941 1.02365C9.17637 0.905017 9.23091 0.795087 9.31566 0.710345C9.4004 0.625603 9.5105 0.570617 9.62913 0.553653C11.1537 0.454878 12.6825 0.434188 14.2092 0.491656C14.3038 0.462418 14.4052 0.464105 14.4988 0.496478C14.5923 0.528851 14.673 0.59023 14.7292 0.671664C14.7864 0.688307 14.8381 0.720165 14.8786 0.763842C14.9192 0.80752 14.9469 0.861378 14.9592 0.919665C15.1391 1.86199 15.1998 2.82322 15.1394 3.78066C15.1294 4.24066 15.1191 4.70466 15.1091 5.16466C15.0991 5.42766 15.0993 5.69165 15.0993 5.95465C14.9993 6.44065 15.1894 6.62567 15.6594 6.51267C16.4494 6.59967 16.6591 5.92866 17.0491 5.31266C17.2791 4.94666 17.4992 4.56966 17.7092 4.18766C18.2092 3.28766 18.569 2.34466 19.029 1.42966C19.0619 1.35651 19.1135 1.29326 19.1784 1.24623C19.2434 1.1992 19.3194 1.17003 19.3992 1.16165C19.4453 1.13562 19.4963 1.11961 19.5491 1.11466C21.3886 0.977428 23.2381 1.05597 25.0593 1.34867Z" />
+            </g>
+        </symbol>
+
+
+        <symbol id="facebook" viewBox="0 0 26 26">
+            <g>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M24.689 25.494H17.6489V16.703H22.0488V12.308H17.6489V9.67C17.6505 9.43719 17.744 9.21437 17.9087 9.04984C18.0734 8.8853 18.296 8.79231 18.5288 8.791H22.4888V4.39099H18.0889C16.7682 4.50233 15.5381 5.10693 14.6431 6.08443C13.748 7.06193 13.2536 8.34064 13.2588 9.666V12.304H9.73877V16.698H13.2588V25.49H2.70898C2.24262 25.4892 1.79568 25.3037 1.46582 24.974C1.13596 24.6443 0.950276 24.1974 0.949219 23.731V1.758C0.95054 1.29181 1.13599 0.845116 1.46582 0.515656C1.79566 0.186195 2.24279 0.000791421 2.70898 0H24.689C25.1536 0.00290161 25.5985 0.189296 25.9263 0.518585C26.2541 0.847875 26.4382 1.29337 26.439 1.758V23.735C26.4384 24.1998 26.2541 24.6455 25.9263 24.9751C25.5984 25.3046 25.1538 25.4911 24.689 25.494Z" />
+            </g>
+        </symbol>
+
+
+
+        <symbol id="instagram" viewBox="0 0 26 26">
+            <g>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M23.3789 0H2.98877C2.3132 0.00237184 1.66618 0.271792 1.18848 0.749496C0.710772 1.2272 0.441337 1.87442 0.438965 2.54999V22.947C0.441337 23.6226 0.710772 24.2698 1.18848 24.7475C1.66618 25.2252 2.3132 25.4946 2.98877 25.497H23.3789C24.055 25.4962 24.7031 25.2273 25.1812 24.7492C25.6592 24.2712 25.9284 23.623 25.9292 22.947V2.547C25.9279 1.87138 25.6587 1.22385 25.1807 0.746399C24.7026 0.268944 24.0545 0.000528187 23.3789 0ZM13.189 7.64799C14.1976 7.64799 15.1838 7.9471 16.0225 8.50749C16.8612 9.06789 17.5149 9.86441 17.9009 10.7963C18.2869 11.7282 18.3877 12.7536 18.1909 13.743C17.9941 14.7323 17.5087 15.641 16.7954 16.3542C16.0822 17.0675 15.1734 17.5532 14.1841 17.75C13.1948 17.9468 12.1692 17.8458 11.2373 17.4598C10.3054 17.0738 9.50913 16.4201 8.94873 15.5814C8.38834 14.7427 8.08887 13.7567 8.08887 12.748C8.09098 11.396 8.62901 10.0999 9.58496 9.14374C10.5409 8.1876 11.8369 7.64937 13.189 7.64699V7.64799ZM3.62891 22.948C3.5436 22.9539 3.45804 22.9415 3.37793 22.9116C3.29782 22.8817 3.22515 22.835 3.16455 22.7747C3.10395 22.7144 3.05664 22.6418 3.02637 22.5618C2.9961 22.4818 2.98329 22.3963 2.98877 22.311V11.472H5.66895C5.56152 11.888 5.51781 12.3179 5.53906 12.747C5.53906 14.7746 6.3446 16.7191 7.77832 18.1528C9.21204 19.5865 11.1565 20.392 13.1841 20.392C15.2117 20.392 17.1561 19.5865 18.5898 18.1528C20.0236 16.7191 20.8291 14.7746 20.8291 12.747C20.8487 12.3185 20.8082 11.8893 20.709 11.472H23.3789V22.307C23.3842 22.3914 23.372 22.476 23.3423 22.5553C23.3126 22.6345 23.266 22.7066 23.2065 22.7667C23.147 22.8269 23.076 22.8738 22.9971 22.9043C22.9182 22.9349 22.8335 22.9484 22.749 22.944H3.62891V22.948ZM23.3789 5.73999C23.3842 5.82443 23.372 5.90905 23.3423 5.98828C23.3126 6.06751 23.266 6.13957 23.2065 6.19972C23.147 6.25988 23.076 6.30677 22.9971 6.33733C22.9182 6.36788 22.8335 6.3814 22.749 6.377H20.1992C20.1139 6.38287 20.0279 6.37044 19.9478 6.34055C19.8676 6.31065 19.795 6.26399 19.7344 6.20367C19.6738 6.14335 19.6269 6.07078 19.5967 5.99081C19.5664 5.91085 19.5536 5.82532 19.5591 5.73999V3.18999C19.5538 3.10474 19.5668 3.01935 19.5972 2.9395C19.6275 2.85965 19.6743 2.7872 19.7349 2.72699C19.7955 2.66678 19.8682 2.6202 19.9482 2.59036C20.0283 2.56053 20.114 2.54814 20.1992 2.554H22.749C22.8334 2.54962 22.9178 2.5631 22.9966 2.5936C23.0754 2.62409 23.1471 2.6709 23.2065 2.73094C23.266 2.79099 23.3121 2.86292 23.3418 2.94203C23.3715 3.02114 23.3841 3.10563 23.3789 3.18999V5.73999Z" />
+            </g>
+        </symbol>
+
+    </svg> -->
+
+
+    <!------------ header ------------>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__wrapper">
+                    <a class="header__link" href="">
+                        <img class="logo" src="assets/images/logo.svg" alt="logo" />
+                    </a>
+
+
+
+                    <a class="header__city-link" href="tel:88001231212">Москва</a>
+                    <div class="header__phone">
+                        <span>Телефон:</span>
+                        <a class="header__phone-link" href="tel:88001231212">8(800)-123-12-12</a>
+                    </div>
+                </div>
+                <a class="header__user" href="#">
+                    <img src="./assets/images/user.svg" class="header__user-img" alt="user" />
+                </a>
+            </div>
+        </div>
+    </header> <!-- /.header -->
+
+    <!------------- main ------------>
+
+    <main class="main">
+        <div class="container">
+            <div class="main__inner">
+                <h1 class="main__title">Эксклюзивная <span>фотосессия</span> при полете на вертолете</h1>
+                <div class="main__price-box">
+                    <div class="main__wrapper">
+                        <span class="main__price-label">Стоимость:</span>
+                        <span class="main__price">1500&#8381;</span>
+                    </div>
+                    <img class="main__percent" src="./assets/images/percent.svg" alt="percent" />
+                </div>
+                <button class="main__btn btn">Забронировать место</button>
+            </div>
+        </div>
+    </main> <!-- /.main -->
+
+
+
+    <!------------- photo --------------->
+
+    <section class="photo">
+        <div class="container">
+            <div class="photo__inner">
+
+                <h2 class="photo__title">Фотосессия <br /> в&#160;вертолете</h2>
+                <!-- <video class="photo__video" src="#" poster="./assets/images/video.jpg">
+                </video> -->
+                <video class="photo__video" src="./assets/video/sky.mp4" controls poster="./assets/images/video.jpg">
+                </video>
+                <div class="photo__desc">
+                    Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф
+                    запечатлит лучшие моменты!
+                </div>
+
+                <ul class="photo__list">
+                    <li class="photo__item photo__item-clock">3 часа съемки</li>
+                    <li class="photo__item photo__item-photo">Более 50 фотографий</li>
+                    <li class="photo__item photo__item-city">Москва</li>
+                    <li class="photo__item photo__item-speech">Готовы ответить на любые вопросы</li>
+                </ul>
+
+            </div>
+
+            <div class="star">
+                <span class="star__value">
+                    Более
+                    <span class="star__bold">50</span>
+                    отзывов с оценкой
+                </span>
+
+                <!-- rating -->
+                <!-- https://snipp.ru/html-css/rating-css -->
+
+                <div class="rating">
+
+                    <div class="rating-result">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+
+                    </div>
+                </div> <!-- /.rating -->
+            </div> <!-- /.star -->
+
+        </div> <!-- /.container -->
+
+        <div class="photo__wrap">
+
+            <div class="container">
+                <h3 class="photo__gallary-title">Фотографии
+                    пакета</h3>
+            </div>
+
+            <div class="photo__gallery">
+                <img class="photo__img" src="./assets/images/gallery/helicopter.jpg" alt="image">
+
+                <img class="photo__img" src="./assets/images/gallery/helicopter.jpg" alt="image">
+
+                <img class="photo__img" src="./assets/images/gallery/woman.jpg" alt="image">
+
+                <img class="photo__img" src="./assets/images/gallery/field.jpg" alt="image">
+
+                <img class="photo__img" src="./assets/images/gallery/kiss.jpg" alt="image">
+
+                <img class="photo__img" src="./assets/images/gallery/kiss.jpg" alt="image">
+
+                <img class="photo__img" src="./assets/images/gallery/field.jpg" alt="image">
+
+                <img class="photo__img" src="./assets/images/gallery/kiss.jpg" alt="image">
+
+            </div>
+
+            <button class="btn-show">Показать все фото</button>
+
+
+        </div> <!-- /.photo__wrap -->
+
+
+    </section> <!-- /.photo -->
+
+
+    <!--------- info -------------->
+
+    <section class="info">
+        <div class="container">
+
+            <div class="info__author">
+                <div class="avatar">
+                    <img class="avatar__img" src="./assets/images/info/avatar.jpg" alt="avatar">
+                    <div class="avatar__inner">
+                        <h2 class="avatar__name">Марина Иванова</h2>
+                        <span class="avatar__career">Фотограф</span>
+                        <button class="avatar__more-info">Показать больше информации о фотографе</button>
+                    </div>
+                </div>
+
+                <div class="info__text">
+
+                    <h3 class="info__about">Об организаторе:</h3>
+
+                    <p class="info__desc info__desc-p">Всем привет! Я фотограф Мария! И по мимо фотосъемки я так же
+                        являюсь
+                        членом группы экспертов туристической отрасли, которые хорошо разбираются
+                        в маркетинге, операциях
+                        и услугах обслуживания клиентов, специализирующихся
+                        на совместном использовании
+                        и частных турах.
+                    </p>
+                    <p class="info__desc"> Сначала мы (я и моя команда) изучаем интересы клиентов, а затем
+                        придумываем подходящее решение, которое соответствует бюджету и планам клиента.
+                        Мы&#160;никогда&#160;не зависим
+                        от&#160;субпоставщиков
+                        <br />
+                        и не свяжемся…</p>
+
+                    <button class="info__more">Читать еще</button>
+
+
+
+                    <h3 class="info__about">Что я предоставлю:</h3>
+
+                    <p class="info__desc">Встречу вас на машине после длительного перелёта.
+                        Качественный подбор места
+                        и локации для вашей съемки.
+                        При&#160необходимости всегда возможно прерваться
+                        на обед/ужин.
+                        Более 50 фотографий на выходе
+                        с обработкой и замечательные впечатления о Дубае!
+                    </p>
+
+                    <button class="info__more">Читать еще</button>
+                </div> <!-- /.info__text -->
+            </div> <!-- /.info__author -->
+
+
+            <div class="calendar">
+                <h2 class="calendar__title">Доступная съемка
+                    в&#160ближайщее время</h2>
+
+                <time class="calendar__date" datetime="2019-04-29 18:00">Пятница, 14 сентября</time>
+
+                <div class="calendar__wrap">
+                    <div class="calendar__box">
+                        <span class="calendar__time">15:00 - 18:00</span>
+                        <span class="calendar__price">850&#36;</span>
+                        <span class="calendar__place">Осталось — 1 место</span>
+                    </div>
+                    <button class="calendar__btn">Выбрать</button>
+                </div>
+
+                <div class="calendar__wrap">
+                    <div class="calendar__box">
+                        <span class="calendar__time">19:00 - 22:00</span>
+                        <span class="calendar__price">850&#36;</span>
+                        <span class="calendar__place">Осталось — 1 место</span>
+                    </div>
+                    <button class="calendar__btn">Выбрать</button>
+                </div>
+
+            </div> <!-- /.calendar -->
+
+            <!---------- star---------->
+
+            <div class="star">
+                <span class="star__value">
+                    Более 150 отзывов с оценкой
+                </span>
+                <!-- rating -->
+                <!-- https://snipp.ru/html-css/rating-css -->
+
+                <div class="rating">
+
+                    <div class="rating-result">
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+                        <span class="active"></span>
+
+                    </div>
+                </div> <!-- /.rating -->
+            </div> <!-- /.star -->
+        </div> <!-- /.container -->
+
+
+        <!-------map-------->
+
+        <div class="map">
+
+            <div class="map__small">
+                <span class="map__meet">Встречаемся тут!</span>
+                <span class="map__close"></span>
+
+
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A9022deffdcf1e33eca2d79bb0d1d5fd2d7d8531716f75bb6cbe9a1481610812d&amp;source=constructor"
+                    width="576" height="430" frameborder="0"></iframe>
+            </div>
+
+            <div class="map__big">
+
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A037178f4c12dcff7d5272bdf9f4fb8c2fb04a4f42b6654d38e9ba40dabeb7de3&amp;source=constructor"
+                    width="100%" height="510px" frameborder="0"></iframe>
+            </div>
+
+        </div>
+
+
+
+        <!-- -------swiper------ -->
+
+        <div class="swiper">
+            <div class="container">
+
+                <div class="swiper-inner">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+
+                            <div class="swiper-slide">
+                                <div class="swiper-content">
+                                    <img class="swiper-img" src="./assets/images/swiper-avatar/swiper1.svg"
+                                        alt="number">
+                                    <span class="swiper-question">Где встречаемся?</span>
+                                    <span class="swiper-city">Москва</span>
+                                </div>
+                            </div> <!-- /.swiper-slide -->
+
+
+                            <div class="swiper-slide">
+                                <div class="swiper-content">
+                                    <img class="swiper-img" src="./assets/images/swiper-avatar/swiper2.svg"
+                                        alt="number">
+                                    <span class="swiper-question">Время съемки</span>
+                                    <span class="swiper-city">3 часа</span>
+                                </div>
+                            </div> <!-- /.swiper-slide -->
+
+
+                            <div class="swiper-slide">
+                                <div class="swiper-content">
+                                    <img class="swiper-img" src="./assets/images/swiper-avatar/swiper3.svg"
+                                        alt="number">
+                                    <span class="swiper-question">Мест осталось:</span>
+                                    <span class="swiper-city">2 места</span>
+                                </div>
+                            </div> <!-- /.swiper-slide -->
+
+                        </div> <!-- /.swiper-wrapper -->
+
+
+
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    </div> <!-- /.swiper-container-->
+
+                    <!----------- avatar--------->
+                    <div class="info__swiper">
+                        <div class="avatar">
+                            <img class="avatar__img" src="./assets/images/info/avatar.jpg" alt="avatar">
+
+                            <div class="avatar__inner">
+                                <h2 class="avatar__name">Марина Иванова</h2>
+                                <span class="avatar__career">Фотограф</span>
+                                <button class="avatar__more-info">Показать больше информации о&#160;фотографе</button>
+                            </div>
+                        </div> <!-- /.avatar-->
+                    </div>
+
+                </div> <!-- /.swiper-inner-->
+            </div> <!-- /.container-->
+
+    </section> <!-- /.info -->
+
+
+
+    <!-- ----------reviews-------- -->
+
+    <section class="reviews">
+        <div class="container">
+
+            <div class="reviews__inner">
+                <h2 class="reviews__title">Отзывы</h2>
+
+
+
+                <article class="reviews__author">
+
+
+                    <img class="reviews__avatar" src="./assets/images/reviews/avatar1.jpg" alt="avatar">
+
+
+                    <div class="reviews__wrap">
+                        <h3 class="reviews__name">Валерия Антонова</h3>
+                        <span class="reviews__career">Арт-директор</span>
+
+                        <!-- rating -->
+                        <!-- https://snipp.ru/html-css/rating-css -->
+
+                        <div class="rating">
+
+                            <div class="rating-result">
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+
+                            </div>
+                        </div> <!-- /.rating -->
+
+                    </div>
+
+                    <span class="reviews__value">Супер! Я бы заказала съемку снова!</span>
+
+                    <p class="reviews__text">Хотим выразить огромную благодарность вашей компании! Получили море
+                        ощущений, все прошло просто замечательно. Фотки получились великолепные, отдельное спасибо
+                        фотографу!</p>
+
+                    <time class="reviews__date" datetime="2019-04-27">27 Апреля, 2019г.</time>
+
+                </article>
+
+
+
+                <article class="reviews__author">
+
+                    <img class="reviews__avatar" src="./assets/images/reviews/avatar2.jpg" alt="avatar">
+
+
+                    <div class="reviews__wrap">
+                        <h3 class="reviews__name">Виталий Петров</h3>
+                        <span class="reviews__career">Фотограф</span>
+
+                        <!-- rating -->
+                        <!-- https://snipp.ru/html-css/rating-css -->
+
+                        <div class="rating">
+
+                            <div class="rating-result">
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+
+                            </div>
+                        </div> <!-- /.rating -->
+
+                    </div>
+
+                    <span class="reviews__value">Супер! Я бы заказала съемку снова!</span>
+
+                    <p class="reviews__text">Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный
+                        октябрьский день :) Впечатлило всё: сам вертолет, взлет, полёт, приземление.
+                        Организация полёта отличная. Спасибо!</p>
+
+                    <time class="reviews__date" datetime="2019-04-19">19 Апреля, 2019г.</time>
+
+                </article>
+
+                <button class="btn-show btn-show--down">Показать Все (134)</button>
+
+            </div>
+
+
+        </div> <!-- /.container -->
+
+    </section> <!-- /.reviews -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <a class="footer__logo" href="">
+                    <img class="logo" src="./assets/images/logo.svg" alt="logo">
+                </a>
+
+
+                <div class="social">
+
+                    <ul class="social__list">
+
+                        <li class="social__item">
+                            <a class="social__link" href="#" target="_blank">
+                                <svg class="social__img">
+                                    <use xlink:href="assets/images/sprite.svg#vk"> </use>
+                                    <!-- <use xlink:href="#vk"> </use> -->
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="social__item">
+                            <a class="social__link" href="#" target="_blank">
+                                <svg class="social__img" viewBox="0 0 26 26">
+                                    <use xlink:href="./assets/images/sprite.svg#facebook"> </use>
+                                    <!-- <use xlink:href="#facebook"> </use> -->
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="social__item">
+                            <a class="social__link" href="#" target="_blank">
+                                <svg class="social__img" viewBox="0 0 26 26">
+                                    <use xlink:href="assets/images/sprite.svg#instagram"> </use>
+                                    <!-- <use xlink:href="#instagram"> </use> -->
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__cards">
+                    <img class="footer__mc" src="./assets/images/card/MC.svg" alt="mc">
+                    <img class="footer__visa" src="./assets/images/card/VISA.svg" alt="visa">
+                </div>
+
+                <select class="footer__lang">
+                    <option class="footer__symbol">ru
+                    <option>
+                    <option class="footer__symbol">en
+                    <option>
+                    <option class="footer__symbol">es
+                    <option>
+                    <option class="footer__symbol">de
+                    <option>
+                    <option class="footer__symbol">it
+                    <option>
+                    <option class="footer__symbol">nl
+                    <option>
+                </select>
+
+
+
+
+                <span class="footer__support">Тех. поддержка:
+                    <a class="footer__tel" href="tel:88007000000">8(800)700-00-00</a>
+                </span>
+
+                <small class="footer__copy">© 2018 HELYFLY. All Rights Reserved.</small>
+
+            </div>
+
+        </div><!-- /.container -->
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+
+
+
+
+      </script>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

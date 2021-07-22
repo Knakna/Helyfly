@@ -1,0 +1,33 @@
+
+function test(a, b) {
+    return a + b
+}
+
+
+const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+console.log(test(5, 2));
+console.log(test(2, 4));
+console.log(test(9, 1));
+
+
+
+//# sourceMappingURL=script.js.map
