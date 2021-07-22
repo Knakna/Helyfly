@@ -16,20 +16,16 @@
     @include text(1.8rem, 500, 1.4, $textColor);
 
     margin-bottom: 1rem;
-
-
 }
 
 .info__desc {
     @include text(1.6rem, 400, 1.5, $textColor);
     padding-bottom: 2rem;
-
 }
 
 .info__desc-p {
     padding-bottom: 3rem;
 }
-
 
 .info__more {
     @include text(1.6rem, 500, 1.4, $linkColor);
@@ -51,5 +47,4 @@
         right: -33px;
         background: url(./../images/photo-icons/arrow.svg) no-repeat;
     }
-
 }

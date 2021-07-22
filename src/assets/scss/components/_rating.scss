@@ -9,13 +9,8 @@
 
 	@include media(xs) {
 		// padding-left: 0;
-
 	}
-
 }
-
-
-
 
 .rating-result {
 	width: 265px;
@@ -46,8 +41,8 @@
 	}
 
 	.rating-result {
-	@include media(sm) {
-        margin-left: 0;
-    }
-}
+		@include media(sm) {
+			margin-left: 0;
+		}
+	}
 }

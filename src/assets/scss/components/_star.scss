@@ -32,8 +32,6 @@
     @include media(md) {
         grid-template-columns: 27% auto;
     }
-
-
 }
 
 .star__value {
@@ -57,7 +55,6 @@
     @include media(xs) {
         font-size: 1.8rem;
     }
-
 }
 
 
@@ -66,9 +63,9 @@
         padding: 3.5rem 1rem 2rem 3rem;
 
         &::before {
-        top: 30px;
-        left: 20px;
-    }
+            top: 30px;
+            left: 20px;
+        }
     }
 
     .star__value {

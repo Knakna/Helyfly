@@ -8,9 +8,9 @@
 }
 
 .map__small {
-	 @include media(xs) {
-		 display: none;
-	 }
+	@include media(xs) {
+		display: none;
+	}
 }
 
 .map__big {

@@ -3,6 +3,7 @@
   padding: 5rem 0;
 
   text-align: center;
+
   .container {
     padding: 0 23px;
   }
@@ -46,6 +47,7 @@
 .swiper-img {
   padding-bottom: 1.5rem;
 }
+
 .swiper-question {
   @include text(1.6rem, 500, 1.4, $textColor);
 
@@ -71,7 +73,6 @@
 .swiper-pagination-bullet-active {
   border: 1px solid transparent;
   background-color: $accentColor;
-
 }
 
 .swiper-button-prev {
@@ -94,15 +95,17 @@
 }
 
 
-.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   bottom: 17px;
 }
 
-.swiper-button-next:after, .swiper-button-prev:after {
+.swiper-button-next:after,
+.swiper-button-prev:after {
   position: relative;
 
   font-size: 18px;
   top: -13px;
   left: 0px;
 }
-

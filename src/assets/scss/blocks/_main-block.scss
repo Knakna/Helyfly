@@ -18,9 +18,7 @@
     @include media(lg) {
         background-size: 127%;
         background-size: cover;
-
     }
-
 }
 
 .container {
@@ -44,7 +42,6 @@
     margin-top: -6px;
 
     max-width: 24.7rem;
-
 
     @include media(xs) {
         margin-top: 1rem;

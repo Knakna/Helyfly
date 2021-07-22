@@ -1,21 +1,22 @@
-
-
 @mixin text($fontSize, $fontWeight, $lineHeight, $color) {
     font-size: $fontSize;
     font-weight: $fontWeight;
     line-height: $lineHeight;
     color: $color;
 }
+
 // @include text(14px, 400, 17px, $linkColor);
 
 
 @mixin media($width, $type:min) {
     @if map_has_key($breakpoints, $width) {
         $width: map_get($breakpoints, $width);
-        @if $type == max {
+
+        @if $type==max {
             $width: $width - 1px;
         }
     }
+
     @media (#{$type}-width: $width) {
         @content;
     }
@@ -27,5 +28,5 @@
 // 1440 @include media(lg) {}
 
 // @media (min-width: 630px) {
-  //   width: 240px;
-  // }
+//   width: 240px;
+// }

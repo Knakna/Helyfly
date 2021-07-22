@@ -12,10 +12,7 @@
     @include media(sm) {
         text-align-last: left;
     }
-
 }
-
-
 
 .reviews__author {
     display: grid;
@@ -28,7 +25,6 @@
 
     @include media(sm) {
     grid-template-columns: 15% 85%;
-
     }
 }
 
@@ -78,7 +74,6 @@
         left: -4px;
         background: url(./../images/check.svg) no-repeat;
     }
-
 }
 
 .reviews__text {
