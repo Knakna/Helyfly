@@ -17,6 +17,9 @@
 
   padding: 5rem 1rem;
 
+  overflow: hidden;
+
+
   @include media(xs) {
     width: 82%;
 
@@ -43,6 +46,8 @@
 .swiper-slide {
   width: 40rem;
 }
+
+
 
 .swiper-img {
   padding-bottom: 1.5rem;
