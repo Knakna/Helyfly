@@ -1,7 +1,8 @@
 @charset "UTF-8";
 .header .container, .container, .photo .container {
   width: 100%;
-  padding: 0 15px; }
+  padding: 0 15px;
+  margin: 0 auto;}
   @media (min-width: 36rem) {
     .header .container, .container, .photo .container {
       padding: 0 35px; } }
@@ -12,7 +13,7 @@
     .header .container, .container, .photo .container {
       padding: 0;
       width: 1140px;
-      margin: 0 auto; } }
+      } }
 
 .btn-show, .info__author .avatar__more-info, .info__swiper .avatar__more-info, .info__more, .footer__lang {
   border: none;
