@@ -649,6 +649,7 @@ body {
   min-height: 21rem;
   width: 100%;
   padding: 5rem 1rem;
+  position:relative;
   overflow: hidden; }
   @media (min-width: 36rem) {
     .swiper-container {
